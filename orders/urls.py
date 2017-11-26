@@ -3,7 +3,7 @@ from . import views
 
 
 urlpatterns = [
-    url(r'^$', views.cart_detail, name='cart_detail'),
-    url(r'^add/(?P<product_id>\d+)/$', views.cart_add, name='cart_add'),
-    url(r'^remove/(?P<product_id>\d+)/$', views.cart_remove, name='cart_remove'),
+    url(r'^order/$', views.order_create, name='order_create'),
+    url(r'^add/(?P<product_id>\d+)/$', views.admin_order_detail, name='admin_order_detail'),
+    url(r'^remove/(?P<product_id>\d+)/$', views.admin_order_pdf, name='admin_order_pdf'),
 ]
