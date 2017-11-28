@@ -10,8 +10,9 @@ urlpatterns = [
     url(r'^orders/', include('orders.urls', namespace='orders')),
     url(r'^payment/', include('payment.urls', namespace='payment')),
     url(r'^paypal/', include('paypal.standard.ipn.urls')),
-    url(r'^', include('shop.urls', namespace='shop')),
     url(r'^coupons/', include('coupons.urls', namespace='coupons')),
+    url(r'^', include('shop.urls', namespace='shop')),
+
 ]
 
 if settings.DEBUG:
