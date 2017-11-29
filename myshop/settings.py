@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'payment',
     'paypal.standard.ipn',
     'coupons',
+    'rosetta',
 
 )
 
@@ -96,7 +97,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en'
 
-from django.utils.translation import gettext_lazy as
+from django.utils.translation import gettext_lazy as _
 
 LANGUAGES = (
     ('en', 'English'),

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 16:07+0100\n"
+"POT-Creation-Date: 2017-11-29 21:37+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,3 +41,27 @@ msgstr "código postal"
 #: orders/models.py:18
 msgid "city"
 msgstr "ciudad"
+
+#: orders/templates/orders/order/create.html:8
+msgid "Checkout"
+msgstr ""
+
+#: orders/templates/orders/order/create.html:11
+msgid "Your order"
+msgstr ""
+
+#: orders/templates/orders/order/create.html:18
+#, python-format
+msgid ""
+"\n"
+"                  \"%(code)s\" (%(discount)s%% off)\n"
+"                  "
+msgstr ""
+
+#: orders/templates/orders/order/create.html:25
+msgid "Total"
+msgstr ""
+
+#: orders/templates/orders/order/create.html:30
+msgid "Place order"
+msgstr ""
