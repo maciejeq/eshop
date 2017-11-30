@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'paypal.standard.ipn',
     'coupons',
     'rosetta',
+    'parler',
 
 )
 
@@ -130,3 +131,14 @@ CART_SESSION_ID = 'cart'
 # django-paypal settings
 PAYPAL_RECEIVER_EMAIL = ''
 PAYPAL_TEST = True
+
+PARLER_LANGUAGES = {
+    None: (
+    {'code': 'en',},
+    {'code': 'es',}
+    ),
+    'default': {
+        'fallback': 'en',
+        'hide_untranslated': False,
+    }
+}

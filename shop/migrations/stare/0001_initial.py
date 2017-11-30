@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.db import models, migrations
+from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
@@ -13,9 +13,9 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Category',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True, serialize=False)),
+                ('id', models.AutoField(primary_key=True, auto_created=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=200, db_index=True)),
-                ('slug', models.SlugField(max_length=200, unique=True)),
+                ('slug', models.SlugField(unique=True, max_length=200)),
             ],
             options={
                 'ordering': ('name',),
@@ -26,12 +26,12 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Product',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True, serialize=False)),
+                ('id', models.AutoField(primary_key=True, auto_created=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=200, db_index=True)),
                 ('slug', models.SlugField(max_length=200)),
-                ('image', models.ImageField(upload_to='products/%Y/%m/%d', blank=True)),
+                ('image', models.ImageField(blank=True, upload_to='products/%Y/%m/%d')),
                 ('description', models.TextField(blank=True)),
-                ('price', models.DecimalField(decimal_places=2, max_digits=10)),
+                ('price', models.DecimalField(max_digits=10, decimal_places=2)),
                 ('stock', models.PositiveIntegerField()),
                 ('available', models.BooleanField(default=True)),
                 ('created', models.DateTimeField(auto_now_add=True)),
